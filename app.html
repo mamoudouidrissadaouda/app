@@ -1,0 +1,305 @@
+<html>
+    <head><base href="https://nafaltravel.com/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAFA TRAVEL - Explorez le monde</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f0f8ff;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .logo svg {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 1rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 300;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        main {
+            margin-top: 100px;
+            padding: 2rem 0;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 3rem 0;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://source.unsplash.com/1600x900/?travel') no-repeat center center/cover;
+            color: white;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #ffd700;
+            color: #003366;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #ffea00;
+        }
+
+        .booking-form {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 2rem;
+        }
+
+        .booking-form h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .submit-btn {
+            background-color: #003366;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #00264d;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            nav ul {
+                justify-content: flex-end;
+            }
+
+            nav ul li {
+                margin-left: 2rem;
+            }
+
+            .logo {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="45" fill="#ffd700"/>
+                    <path d="M50 10 L90 90 L10 90 Z" fill="#003366"/>
+                    <text x="50" y="60" font-family="Arial" font-size="14" text-anchor="middle" fill="white">NAFA</text>
+                </svg>
+                NAFA TRAVEL
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#accueil">ACCUEIL</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="about.html">A PROPOS</a></li>
+                    <li><a href="gallerie.html">GALLERIE</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="accueil" class="hero">
+            <div class="container">
+                <h1>Découvrez le monde avec NAFA TRAVEL</h1>
+                <p>Voyager, c'est s'ouvrir à de nouvelles cultures, élargir ses horizons et créer des souvenirs inoubliables. Chez NAFA TRAVEL, nous croyons que chaque voyage est une opportunité d'enrichir sa vie et de se connecter avec le monde qui nous entoure.</p>
+                <a href="#booking" class="cta-button">Réservez votre voyage maintenant</a>
+            </div>
+        </section>
+
+        <section id="booking" class="container">
+            <div class="booking-form">
+                <h2>Réservez votre billet d'avion</h2>
+                <form id="flight-booking-form">
+                    <div class="form-group">
+                        <label for="name">Nom :</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="firstname">Prénom :</label>
+                        <input type="text" id="firstname" name="firstname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="destination">Destination :</label>
+                        <input type="text" id="destination" name="destination" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date de départ :</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="flight">Vol :</label>
+                        <select id="flight" name="flight" required>
+                            <option value="">Sélectionnez un vol</option>
+                            <option value="AF1234"> Paris CDG</option>
+                            <option value="BA5678">London Heathrow</option>
+                            <option value="LH9012">Frankfurt</option>
+                             <option value="LH9012">dakar</option>
+                             <option value="LH9012">Yaoundé</option>
+                             <option value="LH9012">Douala</option>
+                             <option value="LH9012">conakry</option>
+                             <option value="LH9012">abidjan</option>
+                             <option value="LH9012">cotonou</option>
+                             <option value="LH9012">lomé</option>
+                             <option value="LH9012">bamako</option>
+                             <option value="LH9012">dubai</option>
+                             <option value="LH9012">pekin</option>
+                             <option value="LH9012">Bruxels</option>
+                             <option value="LH9012">Rome</option>
+                             <option value="LH9012">jeddah</option>
+                             <option value="LH9012">Medine</option>
+                             <option value="LH9012">Brazzaville</option>
+                             <option value="LH9012">Luanda</option>
+                             <option value="LH9012">banjul</option>
+                             <option value="LH9012">lagos</option>
+                             <option value="LH9012">Accra</option>
+                             <option value="LH9012">Abuja</option>
+                             <option value="LH9012">Quebec</option>
+                             <option value="LH9012">Monreal</option>
+                             <option value="LH9012">lion</option>
+                             <option value="LH9012">Marseille</option>
+                             <option value="LH9012">Ankara</option>
+                             <option value="LH9012">Madrid</option>
+                             <option value="LH9012">Lisbonne</option>
+                             <option value="LH9012">Rio de janero</option>
+                             <option value="LH9012">Moscow</option>
+                             <option value="LH9012">Amsterdam</option>
+                             <option value="LH9012">ouagadougou</option>
+                             <option value="LH9012">Rabah</option>
+                             <option value="LH9012">Alger</option>
+                             <option value="LH9012">Tinis</option>
+                             <option value="LH9012">Doha</option>
+                             <option value="LH9012">New york</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-btn">Réserver</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy;NAFA TRAVEL. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("YOUR_USER_ID"); // Remplacez par votre User ID EmailJS
+        })();
+
+        document.getElementById('flight-booking-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+                .then(function() {
+                    console.log('SUCCESS!');
+                    alert('Votre réservation a été envoyée avec succès !');
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    alert('Désolé, une erreur s\'est produite. Veuillez réessayer plus tard.');
+                });
+        });
+    </script>
+</body>
+</html>

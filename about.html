@@ -1,0 +1,209 @@
+<html><head><base href="/about">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos - NAFA TRAVEL</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --text-color: #333;
+            --background-color: #f4f4f4;
+        }
+    
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+    
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+    
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 20px;
+        }
+    
+        header {
+            background: var(--primary-color);
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: var(--secondary-color) 3px solid;
+        }
+    
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+    
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+    
+        header #branding {
+            float: left;
+        }
+    
+        header #branding h1 {
+            margin: 0;
+        }
+    
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+    
+        header .highlight, header .current a {
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+    
+        header a:hover {
+            color: #ffffff;
+            font-weight: bold;
+        }
+    
+        #main {
+            padding: 30px 0;
+            background: #ffffff;
+        }
+    
+        #main h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+    
+        #main p {
+            margin-bottom: 20px;
+        }
+    
+        #team {
+            background: #f4f4f4;
+            padding: 30px 0;
+        }
+    
+        #team h2 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+        }
+    
+        .team-member {
+            background: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+    
+        footer {
+            padding: 20px;
+            margin-top: 20px;
+            color: #ffffff;
+            background-color: var(--primary-color);
+            text-align: center;
+        }
+    
+        @media(max-width: 768px) {
+            header #branding,
+            header nav,
+            header nav li {
+                float: none;
+                text-align: center;
+                width: 100%;
+            }
+    
+            header {
+                padding-bottom: 20px;
+            }
+        }
+    </style>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div id="branding">
+                    <h1><span class="highlight">NAFA</span> TRAVEL</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="/">ACCUEIL</a></li>
+                        <li><a href="/contact">CONTACT</a></li>
+                        <li class="current"><a href="/about">A PROPOS</a></li>
+                        <li><a href="/gallery">GALLERIE</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    
+        <section id="main">
+            <div class="container">
+                <h2>À Propos de NAFA TRAVEL</h2>
+                <p>Chez NAFA TRAVEL, nous croyons que le voyage est bien plus qu'un simple déplacement d'un point A à un point B. C'est une opportunité de s'enrichir, de découvrir de nouvelles cultures, de rencontrer des personnes inspirantes et de créer des souvenirs inoubliables.</p>
+                <p>Fondée en 2020, notre agence de voyage s'est donnée pour mission de rendre le monde plus accessible à tous. Que vous soyez un voyageur chevronné ou que vous partiez pour la première fois à l'étranger, nous sommes là pour vous accompagner dans chaque étape de votre aventure.</p>
+                <p>Notre équipe passionnée travaille sans relâche pour vous offrir les meilleures offres, les itinéraires les plus captivants et un service client exceptionnel. Nous comprenons que chaque voyageur est unique, c'est pourquoi nous nous efforçons de personnaliser chaque voyage selon vos désirs et vos besoins.</p>
+            </div>
+        </section>
+    
+        <section id="team">
+            <div class="container">
+                <h2>Notre Équipe</h2>
+                <div class="team-member">
+                    <img src="https://source.unsplash.com/100x100/?portrait" alt="Portrait de Marie Dupont">
+                    <h3>Marie Dupont</h3>
+                    <p>Fondatrice & Directrice</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://source.unsplash.com/100x100/?man" alt="Portrait de Jean Martin">
+                    <h3>Jean Martin</h3>
+                    <p>Responsable des Réservations</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://source.unsplash.com/100x100/?woman" alt="Portrait de Sophie Leclerc">
+                    <h3>Sophie Leclerc</h3>
+                    <p>Spécialiste des Destinations</p>
+                </div>
+            </div>
+        </section>
+    
+        <footer>
+            <p>NAFA TRAVEL, Copyright &copy; 2023</p>
+        </footer>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                // Animation simple pour les membres de l'équipe
+                const teamMembers = document.querySelectorAll('.team-member');
+                teamMembers.forEach((member, index) => {
+                    member.style.opacity = '0';
+                    member.style.transform = 'translateY(20px)';
+                    member.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                    
+                    setTimeout(() => {
+                        member.style.opacity = '1';
+                        member.style.transform = 'translateY(0)';
+                    }, 300 * (index + 1));
+                });
+            });
+        </script>
+    </body>
+    </html>

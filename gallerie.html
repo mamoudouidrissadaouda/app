@@ -1,0 +1,260 @@
+<html><head><base href="/about/gallery">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie - NAFA TRAVEL</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --text-color: #333;
+            --background-color: #f4f4f4;
+        }
+    
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+    
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+    
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 20px;
+        }
+    
+        header {
+            background: var(--primary-color);
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: var(--secondary-color) 3px solid;
+        }
+    
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+    
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+    
+        header #branding {
+            float: left;
+        }
+    
+        header #branding h1 {
+            margin: 0;
+        }
+    
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+    
+        header .highlight, header .current a {
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+    
+        header a:hover {
+            color: #ffffff;
+            font-weight: bold;
+        }
+    
+        #gallery {
+            padding: 30px 0;
+            background: #ffffff;
+        }
+    
+        #gallery h2 {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 20px;
+        }
+    
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+    
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+    
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+    
+        .gallery-item .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0,0,0,0.7);
+            overflow: hidden;
+            width: 100%;
+            height: 0;
+            transition: .5s ease;
+        }
+    
+        .gallery-item:hover .overlay {
+            height: 100%;
+        }
+    
+        .gallery-item .text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 100%;
+        }
+    
+        footer {
+            padding: 20px;
+            margin-top: 20px;
+            color: #ffffff;
+            background-color: var(--primary-color);
+            text-align: center;
+        }
+    
+        @media(max-width: 768px) {
+            header #branding,
+            header nav,
+            header nav li {
+                float: none;
+                text-align: center;
+                width: 100%;
+            }
+    
+            header {
+                padding-bottom: 20px;
+            }
+    
+            .gallery-container {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+    </style>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div id="branding">
+                    <h1><span class="highlight">NAFA</span> TRAVEL</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="/">ACCUEIL</a></li>
+                        <li><a href="/contact">CONTACT</a></li>
+                        <li><a href="/about">A PROPOS</a></li>
+                        <li class="current"><a href="/gallery">GALLERIE</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    
+        <section id="gallery">
+            <div class="container">
+                <h2>Notre Galerie de Voyages</h2>
+                <div class="gallery-container">
+                    <div class="gallery-item">
+                        <img src="https://source.unsplash.com/600x400/?paris" alt="Tour Eiffel à Paris, France" width="600" height="400">
+                        <div class="overlay">
+                            <div class="text">Paris, France</div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://source.unsplash.com/600x400/?bali" alt="Plage tropicale à Bali, Indonésie" width="600" height="400">
+                        <div class="overlay">
+                            <div class="text">Bali, Indonésie</div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://source.unsplash.com/600x400/?newyork" alt="Skyline de New York, États-Unis" width="600" height="400">
+                        <div class="overlay">
+                            <div class="text">New York, États-Unis</div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://source.unsplash.com/600x400/?tokyo" alt="Temple traditionnel à Tokyo, Japon" width="600" height="400">
+                        <div class="overlay">
+                            <div class="text">Tokyo, Japon</div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://source.unsplash.com/600x400/?santorini" alt="Coucher de soleil à Santorini, Grèce" width="600" height="400">
+                        <div class="overlay">
+                            <div class="text">Santorini, Grèce</div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://source.unsplash.com/600x400/?rio" alt="Christ Rédempteur à Rio de Janeiro, Brésil" width="600" height="400">
+                        <div class="overlay">
+                            <div class="text">Rio de Janeiro, Brésil</div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://source.unsplash.com/600x400/?safari" alt="Safari en Afrique" width="600" height="400">
+                        <div class="overlay">
+                            <div class="text">Safari en Afrique</div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://source.unsplash.com/600x400/?venice" alt="Gondoles à Venise, Italie" width="600" height="400">
+                        <div class="overlay">
+                            <div class="text">Venise, Italie</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <footer>
+            <p>NAFA TRAVEL, Copyright &copy; 2023</p>
+        </footer>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                const galleryItems = document.querySelectorAll('.gallery-item');
+                
+                galleryItems.forEach((item, index) => {
+                    item.style.opacity = '0';
+                    item.style.transform = 'scale(0.9)';
+                    item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                    
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'scale(1)';
+                    }, 100 * (index + 1));
+                });
+            });
+        </script>
+    </body>
+    </html>
